@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="./Disenio.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+        <script type="text/javascript" src="./Movimientos.js"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap" rel="stylesheet">;
+        <title>AJEDREZ</title>
+    </head>
+    <body>
+        <div class="title">
+        <h1 id="tit">AJEDREZ</h1>
+        </div>
+
+        <main id="Tablero">
+
+            <div class="Bloque"><span></span></div>
+            <div class="Bloque"><span>a</span></div>
+            <div class="Bloque"><span>b</span></div>
+            <div class="Bloque"><span>c</span></div>
+            <div class="Bloque"><span>d</span></div>
+            <div class="Bloque"><span>e</span></div>
+            <div class="Bloque"><span>f</span></div>
+            <div class="Bloque"><span>g</span></div>
+            <div class="Bloque"><span>h</span></div>
+            <div class="Bloque"><span></span></div>
+
+            <div class="fila">
+                <div class="Bloque"><span>8</span></div>
+
+                <div class="Bloque Claro">
+                    <span id="tor_n1">&#x265C;</span>
+                </div>
+                <div class="Bloque Oscuro">
+                    <span id="cab_n1">&#x265E;</span>
+                </div>
+                <div class="Bloque Claro">
+                    <span id="alf_n1">&#x265D;</span>
+                </div>
+                <div class="Bloque Oscuro">
+                    <span id="reina_n">&#x265B;</span>
+                </div>
+                <div class="Bloque Claro">
+                    <span id="rey_n">&#x265A;</span>
+                </div>
+                <div class="Bloque Oscuro">
+                    <span id="alf_n2">&#x265D;</span>
+                </div>
+                <div class="Bloque Claro">
+                    <span id="cab_n2">&#x265E; </span>
+                </div>                
+                <div id="a8" class="Bloque Oscuro">
+                    <span id="tor_n2">&#x265C; </span>
+                </div>
+                <div class="Bloque"><span>8</span></div>
+            </div>
+            <div class="fila">
+                <div class="Bloque"><span>7</span></div>
+                             
+                <div id="a7" class="Bloque Oscuro">
+                    <span id="pe_n1">&#x265F;</span>
+                </div>
+                    
+                <div class="Bloque Claro">
+                    <span id="pe_n2">&#x265F;</span>
+                </div>
+                <div class="Bloque Oscuro">
+                    <span id="pe_n3">&#x265F;</span>
+                </div>
+                    
+                <div class="Bloque Claro">
+                    <span id="pe_n4">&#x265F;</span>
+                </div>
+                <div class="Bloque Oscuro">
+                    <span id="pe_n5">&#x265F;</span>
+                </div>
+                <div class="Bloque Claro">
+                    <span id="pe_n6">&#x265F;</span>
+                </div>
+                <div class="Bloque Oscuro">
+                    <span id="pe_n7">&#x265F;</span>
+                </div>
+                <div class="Bloque Claro">
+                    <span id="pe_n8">&#x265F;</span>
+                </div>   
+                <div class="Bloque"><span>7</span></div>
+            </div> 
+            <div class="fila">
+                <div class="Bloque"><span>6</span></div>
+
+                <div class="Bloque Claro">
+                </div>
+                <div class="Bloque Oscuro">
+                </div>
+                <div class="Bloque Claro">
+                </div>
+                <div class="Bloque Oscuro">
+                </div>
+                <div class="Bloque Claro">
+                </div>
+                <div class="Bloque Oscuro">
+                </div>
+                <div class="Bloque Claro">
+                </div>                
+                <div id="a8" class="Bloque Oscuro">
+                </div>
+                <div class="Bloque"><span>6</span></div>
+            </div>
+            <div class="fila">
+                <div class="Bloque"><span>5</span></div>
+                             
+                <div id="a5"class="Bloque Oscuro">
+                </div>
+                <div class="Bloque Claro">
+                </div>
+                <div class="Bloque Oscuro">
+                </div>
+                <div class="Bloque Claro">
+                </div>
+                <div class="Bloque Oscuro">
+                </div>
+                <div class="Bloque Claro">
+                </div>
+                <div class="Bloque Oscuro">
+                </div>
+                <div class="Bloque Claro">
+                </div>   
+                <div class="Bloque"><span>5</span></div>
+            </div>
+            <div class="fila">
+                <div class="Bloque"><span>4</span></div>
+
+                <div class="Bloque Claro">
+                </div>
+                <div class="Bloque Oscuro">
+                </div>
+                <div class="Bloque Claro">
+                </div>
+                <div class="Bloque Oscuro">
+                </div>
+                <div class="Bloque Claro">
+                </div>
+                <div class="Bloque Oscuro">
+                </div>
+                <div class="Bloque Claro">
+                </div>                
+                <div id="" class="Bloque Oscuro">
+                </div>
+                <div class="Bloque"><span>4</span></div>
+            </div>
+            <div class="fila">
+                <div class="Bloque"><span>3</span></div>
+                             
+                <div class="Bloque Oscuro">
+                </div>
+                <div class="Bloque Claro">
+                </div>
+                <div class="Bloque Oscuro">
+                </div>
+                <div class="Bloque Claro">
+                </div>
+                <div class="Bloque Oscuro">
+                </div>
+                <div class="Bloque Claro">
+                </div>
+                <div class="Bloque Oscuro">
+                </div>
+                <div class="Bloque Claro">
+                </div>   
+                <div class="Bloque"><span>3</span></div>
+            </div>
+            <div class="fila">
+                <div class="Bloque"><span>2</span></div>
+
+                <div class="Bloque Claro">
+                    <span id="pe_b1">&#x2659;</span>
+                </div>
+                <div class="Bloque Oscuro">
+                    <span id="pe_b2">&#x2659;</span>
+                </div>
+                <div class="Bloque Claro">
+                    <span id="pe_b3">&#x2659;</span>
+                </div>
+                <div class="Bloque Oscuro">
+                    <span id="pe_b4">&#x2659;</span>
+                </div>
+                <div class="Bloque Claro">
+                    <span id="pe_b5">&#x2659;</span>
+                </div>
+                <div class="Bloque Oscuro">
+                    <span id="pe_b6">&#x2659;</span>
+                </div>
+                <div class="Bloque Claro">
+                    <span id="pe_b7">&#x2659;</span>
+                </div>                
+                <div id="a8" class="Bloque Oscuro">
+                    <span id="pe_b8">&#x2659;</span>
+                </div>
+                <div class="Bloque"><span>2</span></div>
+            </div>
+            <div class="fila">
+                <div class="Bloque"><span>1</span></div>
+                             
+                <div class="Bloque Oscuro">
+                    <span id="torr_b1">&#x2656;</span>
+                </div>
+                    
+                <div class="Bloque Claro">
+                    <span id="cab_b1">&#x2658;</span>
+                </div>
+                <div class="Bloque Oscuro">
+                    <span id="alf_b1">&#x2657;</span>    
+                </div>
+                    
+                <div class="Bloque Claro">
+                    <span id="reina_b">&#x2655;</span>
+                </div>
+                <div class="Bloque Oscuro">
+                    <span id="rey_b">&#x2654;</span>
+                </div>
+                <div class="Bloque Claro">
+                    <span id="alf_b2">&#x2657;</span>
+                </div>
+                <div class="Bloque Oscuro">
+                    <span id="cab_b2">&#x2658;</span>
+                </div>
+                <div class="Bloque Claro">
+                    <span id="torr_b2">&#x2656;</span>
+                </div>   
+                <div class="Bloque"><span>1</span></div>
+            </div> 
+
+
+            <div class="Bloque"><span></span></div>
+            <div class="Bloque"><span>a</span></div>
+            <div class="Bloque"><span>b</span></div>
+            <div class="Bloque"><span>c</span></div>
+            <div class="Bloque"><span>d</span></div>
+            <div class="Bloque"><span>e</span></div>
+            <div class="Bloque"><span>f</span></div>
+            <div class="Bloque"><span>g</span></div>
+            <div class="Bloque"><span>h</span></div>
+            <div class="Bloque"><span></span></div>
+        </main>
+    </body>
+
+</html>
