@@ -8,16 +8,16 @@ body{
 }
 
 #general{
-    width: 150vh;
-    height: 150vh;
+    width: 120vh;
+    height: 120vh;
     background-color: aqua;
 }
 #tab{
-    margin: 25vh;
+    margin: 15vh;
     justify-content: center;
     align-items: center;
-    width: 700px;
-    height: 700px;
+    width: 950px;
+    height: 950px;
     background-color: blueviolet;
 }
 .title{
@@ -38,8 +38,8 @@ body{
 
 }
 #Tablero{
-    width: 700px auto;
-    height: 700px auto;
+    width: 950px auto;
+    height: 950px auto;
     background-color: yellow;
     justify-content: center;
     align-items: center;
@@ -47,8 +47,8 @@ body{
 
 }
 .Bloque{
-    width: 70px;
-    height: 70px;
+    width: 95px;
+    height: 95px;
     border: 10px;
     float: left;
     text-align: center;
