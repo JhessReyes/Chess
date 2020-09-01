@@ -6,16 +6,17 @@ body{
     align-items: center;
 }
 .title{
-    padding: 2rem 5rem;
+    padding: 1rem 1rem;
     background: yellow;
-    justify-content: top;
+    justify-content: center;
        position: fixed;
-        right:0;
-        top:0;
+        right:0 auto;
+        width: 0 auto;
+        top: 0 ;
 }
 #Tablero{
-    width: 700px;
-    height: 700px;
+    width: 200px auto;
+    height: 200px auto;
     background-color: yellow;
     align-items: center;
 }
