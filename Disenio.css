@@ -9,24 +9,26 @@ body{
 
 #general{
     width: 120vh;
-    height: 120vh;
-    background-color: aqua;
+    height: 150vh;
+    background-color: cadetblue;
 }
 #tab{
-    margin: 15vh;
+    margin: 12vh;
     justify-content: center;
     align-items: center;
-    width: 950px;
-    height: 950px;
-    background-color: blueviolet;
+    width: 750px;
+    height: 750px;
+    background-color: cadetblue;
 }
 .title{
+    border-radius: 2cm;
     display: flex;
-    padding: 1rem 1rem;
+    padding: 0.2rem 0.2rem;
     background: rgb(148, 147, 147);
     justify-content: center;
     align-items: center;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: 'Amatic SC', cursive;
+    font-size: larger;
 }
 .banner{
     display: flex;
@@ -47,16 +49,25 @@ body{
 
 }
 .Bloque{
-    width: 95px;
-    height: 95px;
+    width: 75px;
+    height: 75px;
     border: 10px;
     float: left;
     text-align: center;
     font-size: 3.5em;
+    background-color: azure;
+    border-radius: 0.1rem;
 
 }
 .Oscuro{
 background-color: rgba(0, 0, 0, 0.555);
+}
+.Oscuro:hover{
+    background-color: aquamarine;
+}
+
+.Claro:hover{
+    background-color: aquamarine;
 }
 .Claro{
 background-color: rgb(148, 147, 147);
@@ -64,7 +75,10 @@ background-color: rgb(148, 147, 147);
 #footer{
     justify-content: center;
     display: flex;
+    border-radius: 0.5cm;
     width: 500px auto;
     height: 300px auto;
-    background: red;
+    background: rgb(148, 147, 147);;
+    font-family: 'Amatic SC', cursive;
+    font-size: x-small;
 }
