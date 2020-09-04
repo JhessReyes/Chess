@@ -49,13 +49,20 @@ function CheckBloque(x,y){
     if(sepuedeN){
         CheckPeonNegro(x,y);
     }
-    if(mano==true && board[x][y]==1 || mano==true && board[x][y]==2){
-        deselect(x,y);
-    }
-    if(blancas||sepuedeB){
+
+    if(sepuedeB){
         CheckPeonBlanco(x,y);
     }
-    if(negras||sepuedeN){
+    if(blancas){
+        if(mano==true && board[x][y]==1){
+            deselect(x,y);
+        }
+        CheckPeonBlanco(x,y);
+    }
+    if(negras){
+        if(mano==true && board[x][y]==2){
+            deselect(x,y);
+        }
         CheckPeonNegro(x,y);
     }
 }
@@ -162,14 +169,12 @@ function deselect(x,y){
 }
 var sepuedeN =false;
 var sepuedeB = false;
-var pieza1;
-var pieza2;
-var pieza3;
 
 function comerNegras(x,y){ /* VERIFICA SI A SUS ALREDEDORES HAY ENEMIGOS*/ 
     pieza1 = board[x+1][y+1];
     pieza2 = board[x-1][y+1];
     pieza3 = board[x][y+1];
+    if(!negras){
     if (board[x+1][y+1]==2){
         PintarBloque(x+1, y+1,"red");
         sepuedeN = true;
@@ -181,6 +186,7 @@ function comerNegras(x,y){ /* VERIFICA SI A SUS ALREDEDORES HAY ENEMIGOS*/
     if(pieza3==2){
         PintarBloque(x, y+1,"yellow");
     }
+}
 
 }
 function Cneg(x,y){ /* FUNCION QUE ELIMINA LAS PIEZAS NEGRAS POR TURNO */
@@ -194,7 +200,6 @@ function Cneg(x,y){ /* FUNCION QUE ELIMINA LAS PIEZAS NEGRAS POR TURNO */
         sepuedeN = false;
         blancas=false;
         negras=true;
-        deselect(x,y);
         alert("Turno del jugador 2 (NEGRAS)");
         mano=false;
         eliminarpieza(bloqueselec_x,bloqueselec_y);
@@ -213,7 +218,6 @@ function Cbla(x,y){ /* FUNCION QUE ELIMINA LA PIEZA BLANCA POR TURNO*/
         sepuedeB = false;
         blancas = true;
         negras =false;
-        deselect(x,y);
         alert("Turno del jugador 1 (BLANCAS)");
         mano=false;
         eliminarpieza(bloqueselec_x,bloqueselec_y);
@@ -226,6 +230,7 @@ function comerBlancas(x,y){
     pieza1 = board[x+1][y-1];
     pieza2 = board[x-1][y-1];
     pieza3 = board[x][y-1];
+    if(!blancas){
     if (pieza1==1){
         PintarBloque(x+1, y-1,"red");
         sepuedeB=true;
@@ -237,6 +242,7 @@ function comerBlancas(x,y){
     if(pieza3==1){
         PintarBloque(x, y-1,"yellow");
     }
+}
 }
 
 function eliminarpieza(bloqueselec_x,bloqueselec_y){
