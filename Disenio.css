@@ -13,11 +13,11 @@ body{
     background-color: cadetblue;
 }
 #tab{
-    margin: 12vh;
+    margin: 10vh;
     justify-content: center;
     align-items: center;
-    width: 750px;
-    height: 750px;
+    width: 800px;
+    height: 800px;
     background-color: cadetblue;
 }
 .title{
@@ -39,38 +39,38 @@ body{
         background-color: orange
 
 }
-#Tablero{
-    width: 950px auto;
-    height: 950px auto;
-    background-color: yellow;
-    justify-content: center;
-    align-items: center;
-    border: 50px;
-
-}
 .Bloque{
-    width: 75px;
-    height: 75px;
-    border: 10px;
+    border-style: solid;
+    width: 70px;
+    height: 70px;
+    padding: 0.5px;
     float: left;
     text-align: center;
     font-size: 3.5em;
     background-color: azure;
-    border-radius: 0.1rem;
-
 }
 .Oscuro{
-background-color: rgba(0, 0, 0, 0.555);
+    background-color: rgba(0, 0, 0, 0.555);
+    cursor: -ms-grab; 
+    cursor: -moz-grab; 
+    cursor: -webkit-grab; 
+    cursor: grab;
 }
 .Oscuro:hover{
-    background-color: aquamarine;
+    border-color: aquamarine;
+    border-style: outset;
 }
 
 .Claro:hover{
-    background-color: aquamarine;
+    border-color: aquamarine;
+    border-style: outset;
 }
 .Claro{
-background-color: rgb(148, 147, 147);
+    cursor: -ms-grab; 
+    cursor: -moz-grab; 
+    cursor: -webkit-grab; 
+    cursor: grab;
+    background-color: rgb(148, 147, 147);
 }
 #footer{
     justify-content: center;
@@ -82,3 +82,9 @@ background-color: rgb(148, 147, 147);
     font-family: 'Amatic SC', cursive;
     font-size: x-small;
 }
+.mano {
+    cursor: -ms-grabbing; 
+    cursor: -moz-grabbing; 
+    cursor: -webkit-grabbing; 
+    cursor: grabbing; 
+    }
