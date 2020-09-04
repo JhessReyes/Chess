@@ -50,7 +50,7 @@ body{
     background-color: azure;
 }
 .Oscuro{
-    background-color: rgba(0, 0, 0, 0.555);
+    background: rgba(0, 0, 0, 0.555);
     cursor: -ms-grab; 
     cursor: -moz-grab; 
     cursor: -webkit-grab; 
@@ -70,7 +70,7 @@ body{
     cursor: -moz-grab; 
     cursor: -webkit-grab; 
     cursor: grab;
-    background-color: rgb(148, 147, 147);
+    background: rgb(148, 147, 147);
 }
 #footer{
     justify-content: center;
