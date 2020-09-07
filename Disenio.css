@@ -40,6 +40,7 @@ body{
 
 }
 .Bloque{
+    border-color: transparent;
     border-style: solid;
     width: 70px;
     height: 70px;
@@ -47,15 +48,19 @@ body{
     float: left;
     text-align: center;
     font-size: 3.5em;
-    background-color: azure;
+    background-color:gold;
 }
+
 .Oscuro{
-    background: rgba(0, 0, 0, 0.555);
-    cursor: -ms-grab; 
-    cursor: -moz-grab; 
-    cursor: -webkit-grab; 
-    cursor: grab;
+    background: rgba(0, 0, 0, 0.555); 
+    cursor: cell; 
 }
+
+.Claro{
+    cursor: cell;
+    background: rgb(148, 147, 147);
+}
+
 .Oscuro:hover{
     border-color: aquamarine;
     border-style: outset;
@@ -65,13 +70,7 @@ body{
     border-color: aquamarine;
     border-style: outset;
 }
-.Claro{
-    cursor: -ms-grab; 
-    cursor: -moz-grab; 
-    cursor: -webkit-grab; 
-    cursor: grab;
-    background: rgb(148, 147, 147);
-}
+
 #footer{
     justify-content: center;
     display: flex;
