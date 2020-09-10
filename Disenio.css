@@ -1,6 +1,6 @@
 
 body{
-    background: cadetblue;
+    background: rgb(181, 238, 240);
     padding: 5rem;
     display: flex;
     justify-content: center;
@@ -8,17 +8,19 @@ body{
 }
 
 #general{
-    width: 100vh;
-    height: 100vh;
-    background-color: cadetblue;
+
+    width: 0 auto;
+    height: 0 auto;
 }
 #tab{
-    margin: 1vh;
+    display: flex;
+    margin: 0.5vh;
     justify-content: center;
     align-items: center;
-    width: 800px;
-    height: 800px;
-    background-color: cadetblue;
+    width: 0 auto;
+    height: 120vh;
+    background-color: wheat;
+    border-radius: 25px;
 }
 .title{
     border-radius: 2cm;
@@ -29,36 +31,38 @@ body{
     align-items: center;
     font-family: 'Amatic SC', cursive;
     font-size: larger;
+    width: 0 auto;
+    height: 0 auto;
 }
 .banner{
+    margin: 10px;
     display: flex;
-    justify-content: top;
-    align-items: center;
-        width: 200px;
-        height: 300px;
-        background-color: orange
-
+    justify-content: center;
+    width: 0 auto;
+    height: 0 auto;
+    background-color: orange;
+    border-radius: 10px;
 }
 .Bloque{
     border-color: transparent;
     border-style: solid;
-    width: 70px;
-    height: 70px;
+    width: 60px;
+    height: 60px;
     padding: 0.5px;
     float: left;
     text-align: center;
-    font-size: 3.5em;
+    font-size: 3.3em;
     background-color:gold;
 }
 
 .Oscuro{
-    background: rgba(0, 0, 0, 0.555); 
+    background: rgba(90, 90, 207, 0.655); 
     cursor: cell; 
 }
 
 .Claro{
     cursor: cell;
-    background: rgb(148, 147, 147);
+    background: rgba(179, 176, 255, 0.486);
 }
 
 .Oscuro:hover{
@@ -72,18 +76,12 @@ body{
 }
 
 #footer{
-    justify-content: center;
     display: flex;
+    justify-content: center;
     border-radius: 0.5cm;
-    width: 500px auto;
-    height: 300px auto;
+    width: 0 auto ;
+    height: 0 auto;
     background: rgb(148, 147, 147);;
     font-family: 'Amatic SC', cursive;
     font-size: x-small;
 }
-.mano {
-    cursor: -ms-grabbing; 
-    cursor: -moz-grabbing; 
-    cursor: -webkit-grabbing; 
-    cursor: grabbing; 
-    }

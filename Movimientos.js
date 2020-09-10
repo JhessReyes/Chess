@@ -47,6 +47,9 @@ function Bloquelibre(){
 
 
 function CheckBloque(x,y){
+
+    valor = document.getElementById("b"+x+y).innerText;
+    valorant = valor;
     Turno(x,y,"none");
 
     if(sepuedeN){
@@ -62,7 +65,8 @@ function CheckBloque(x,y){
         if(mano==true && board[x][y]==1){
             deselect(x,y);
         }
-        CheckPeonBlanco(x,y);
+            CheckPeonBlanco(x,y);
+            CheckTowerWhite(x,y);       
     }
 
     if(negras){
@@ -70,7 +74,7 @@ function CheckBloque(x,y){
         if(mano==true && board[x][y]==2){
             deselect(x,y);
         }
-        CheckPeonNegro(x,y);
+            CheckPeonNegro(x,y);
     }
 }
 
@@ -78,10 +82,10 @@ function CheckBloque(x,y){
 /*FUNCIONES PARA VALIDAR DATOS DE LOS PEONES */
 function CheckPeonBlanco(x,y){
 checktrue= false;
-valor = document.getElementById("b"+x+y).innerText;
+    if(blancas){
         if(valor == "♙" && mano==false && board[x][y] == 1){ /*SI ES UN PEON BLANCO EXISTE UNA PIEZA Y NO SE HA AGARRADO */
             mano=true; 
-            if(y==1 && board[x][y+2]!=2){
+            if(y==1 && board[x][y+2]!=2 && board[x][y+1]==0){
                 PintarBloque(x,y,"aquamarine");
                 PintarBloque(x,y+1,"aquamarine");
                 PintarBloque(x,y+2,"aquamarine");    
@@ -92,13 +96,14 @@ valor = document.getElementById("b"+x+y).innerText;
             bloqueselec_y = y;
             comerNegras(x,y);
         }
-        if(blancas == true && mano == true && board[x][y] == 0){ /*SI YA SE AGARRO Y EL BLOQUE ESTA BACÍO*/
+        if(mano == true && board[x][y] == 0){ /*SI YA SE AGARRO Y EL BLOQUE ESTA BACÍO*/
             dif_x = x - bloqueselec_x; /*DIFERENCIA EJE X DEL ACTUAL Y EL ANTERIOR */
-            dif_y = y - bloqueselec_y; /*DIFERENCIA EJE Y DEL ACTUAL Y EL ANTERIOR */
-            board[bloqueselec_x][bloqueselec_y]=0;
-            if(dif_x == 0 && dif_y == 2|| dif_x == 0 && dif_y== 1){checktrue=true;} /*mover el peon blanco dos o una casilla arriba*/
+            dif_y = y - bloqueselec_y; /*DIFERENCIA EJE Y DEL ACTUAL Y EL ANTERIOR */    
+            b = document.getElementById("b"+bloqueselec_x+bloqueselec_y).innerText;
+            if(b == "♙" && bloqueselec_y==1 && board[bloqueselec_x][bloqueselec_y+1]==0 && dif_x == 0 && dif_y == 2|| b == "♙"&&dif_x == 0 && dif_y== 1){checktrue=true;} /*mover el peon blanco dos o una casilla arriba*/
             if(checktrue){
                 mano=false;
+                board[bloqueselec_x][bloqueselec_y]=0;
                 board[x][y] = 1; 
                 PintarPeonBlanco(x,y); 
                 eliminarpieza(bloqueselec_x,bloqueselec_y);
@@ -108,17 +113,19 @@ valor = document.getElementById("b"+x+y).innerText;
                 alert("Turno del jugador 2 (NEGRAS)");
             }
         }
-        if(sepuedeB==true && mano==true && board[x][y]==1){
+    }        
+    
+    if(sepuedeB==true && mano==true && board[x][y]==1){
             Cbla(x,y); /*Llama la funcion para eliminar al enemigo */
-        }
+    }
 }
 
 function CheckPeonNegro(x,y){
 checktrue= false;
-valor = document.getElementById("b"+x+y).innerText;
+    if(negras){
         if(valor == "♟" && mano==false && board[x][y] == 2){ /*SI ES UN PEON NEGRO, ES PIEZA NEGRA Y NO SE HA AGARRADO */
             mano=true;
-            if(y==6 && board[x][y-2]!=2){
+            if(y==6 && board[x][y-2]!=1 && board[x][y-1]==0 ){
                 PintarBloque(x,y,"aquamarine");
                 PintarBloque(x,y-1,"aquamarine");
                 PintarBloque(x,y-2,"aquamarine");    
@@ -129,12 +136,13 @@ valor = document.getElementById("b"+x+y).innerText;
             bloqueselec_y = y;
             comerBlancas(x,y);
         }
-        if(negras==true && mano==true && board[x][y]==0){ /*YA SE AGARRO Y EL BLOQUE SELECCIONADO ESTA BACIO */
+        if(mano==true && board[x][y]==0){ /*YA SE AGARRO Y EL BLOQUE SELECCIONADO ESTA BACIO */
             dif_x = x - bloqueselec_x; /* DIFERENCIA EJE X ACTUAL - ANTERIOR*/
             dif_y = y - bloqueselec_y; /* DIFERENCIA EJE Y ACTUAL - ANTERIOR*/
-            board[bloqueselec_x][bloqueselec_y]=0; 
-            if(dif_x == 0 && dif_y == -2|| dif_x == 0 && dif_y==-1){checktrue=true;} /*mover el peon negro uno abajo*/
+            b = document.getElementById("b"+bloqueselec_x+bloqueselec_y).innerText;
+            if(b == "♟" && bloqueselec_y==6 && board[bloqueselec_x][bloqueselec_y-1]==0 && dif_x == 0 && dif_y == -2|| b == "♟" && dif_x == 0 && dif_y==-1){checktrue=true;} /*mover el peon negro uno abajo*/
             if(checktrue){
+                board[bloqueselec_x][bloqueselec_y]=0; 
                 mano=false;
                 board[x][y] = 2; 
                 PintarPeonNegro(x,y);  
@@ -145,6 +153,7 @@ valor = document.getElementById("b"+x+y).innerText;
                 alert("Turno del jugador 1 (BLANCAS)");        
             }
         }
+    }
         if(sepuedeN==true && mano==true && board[x][y]==2){
             Cneg(x,y); /*Llama la funcion para eliminar al enemigo */
         }
