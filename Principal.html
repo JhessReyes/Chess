@@ -4,10 +4,7 @@
         <meta charset="UTF-8">
         <link rel="stylesheet" href="./Disenio.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-        <script type="text/javascript" src="./Tablero.js"></script>
-        <script type="text/javascript" src="./Play.js"></script>
-        <script type="text/javascript" src="./Torres.js"></script>
-        <script type="text/javascript" src="./Movimientos.js"></script>
+
         <link href="https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap" rel="stylesheet">;
         <title>AJEDREZ</title>
     </head>
@@ -17,7 +14,12 @@
               <h1 id="tit">AJEDREZ</h1>
             </div>
             <div class="banner">
-                <h1 id="tit1"></h1>
+                <div class="container1">
+                    <p><h2>TIEMPO</h2></p>
+                </div>
+                <div class="container2">
+                    <p id="cronometro"><h2><span id="minut">00</span>:<span id="segun">00</span></h2></p>
+                </div>
             </div>
             <div id="tab">        
             <main id="Tablero">
@@ -255,5 +257,13 @@
                 <h1> Copyright &copy; &times; By &times; Reyes Riveiro, Jhonatan Essau &trade; - 2020</h1>
             </div>    
         </div>
+        <script type="text/javascript" src="./Tablero.js"></script>
+        <script type="text/javascript" src="./Plays.js"></script>
+        <script type="text/javascript" src="./Caballo.js"></script>
+        <script type="text/javascript" src="./Alfil.js"></script>
+        <script type="text/javascript" src="./Torre.js"></script>
+        <script type="text/javascript" src="./Reina.js"></script>
+        <script type="text/javascript" src="./Rey.js"></script>
+        <script type="text/javascript" src="./Movimientos.js"></script>
     </body>
 </html>

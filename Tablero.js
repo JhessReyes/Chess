@@ -5,12 +5,11 @@ function Matriz(){
     BloqueOcupadoBlancas();
     BloqueOcupadoNegras();
 }
+
 function BloqueOcupadoBlancas(){
     for(x=0; x<8; x++){
         for(y=0; y<2; y++){
-            if(y==1){
-                board[x][y]=1;
-            }
+            board[x][y]=1;
         }
     }
 }

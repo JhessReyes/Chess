@@ -1,5 +1,6 @@
 
 body{
+    font-family: 'Amatic SC', cursive;
     background: rgb(181, 238, 240);
     padding: 5rem;
     display: flex;
@@ -8,7 +9,9 @@ body{
 }
 
 #general{
-
+    justify-content: center;
+    justify-items: center;
+    font-family: 'Amatic SC', cursive;
     width: 0 auto;
     height: 0 auto;
 }
@@ -18,12 +21,12 @@ body{
     justify-content: center;
     align-items: center;
     width: 0 auto;
-    height: 120vh;
+    height: 95vh;
     background-color: wheat;
     border-radius: 25px;
 }
 .title{
-    border-radius: 2cm;
+    border-radius: 1cm;
     display: flex;
     padding: 0.2rem 0.2rem;
     background: rgb(148, 147, 147);
@@ -35,14 +38,30 @@ body{
     height: 0 auto;
 }
 .banner{
-    margin: 10px;
+    margin: 3px;
     display: flex;
-    justify-content: center;
     width: 0 auto;
-    height: 0 auto;
+    height: 80px;
     background-color: orange;
     border-radius: 10px;
 }
+.container1{
+    font-size: larger;
+    display: flex;
+    padding-left: 8rem;
+    padding-right: 4rem;
+    justify-content: left;
+    justify-items: left;
+}
+.container2{
+    font-size: larger;
+    display: flex;
+    padding-left: 8rem;
+    padding-right: 4rem;
+    justify-content: right;
+    justify-items: right;
+}
+
 .Bloque{
     border-color: transparent;
     border-style: solid;

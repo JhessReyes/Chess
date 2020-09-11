@@ -1,5 +1,4 @@
 
-var board = new Array(8);
 var bloqueselec_x;
 var bloqueselec_y;
 var mano = false;
@@ -7,49 +6,22 @@ var dif_x;
 var dif_y;
 var sepuedeN =false;
 var sepuedeB = false;
+var Total_s;
+var Total_m;
+var cronometro;
 
 /*Turnos de jugada */
 let blancas = true;
 let negras = false;
 
 function play(){
+    Reset();
     Matriz();
+    Start();
 }
-
-function Matriz(){
-    for(i=0;i<8;i++) board[i] = new Array(8);
-    Bloquelibre();
-    BloqueOcupadoBlancas();
-    BloqueOcupadoNegras();
-}
-
-function BloqueOcupadoBlancas(){
-    for(x=0; x<8; x++){
-        for(y=0; y<2; y++){
-            board[x][y]=1;
-        }
-    }
-}
-function BloqueOcupadoNegras(){
-    for(x=0; x<8; x++){
-        for(y=6; y<8; y++){
-            board[x][y]=2;
-        }
-    }
-}
-function Bloquelibre(){
-    for(x=0; x<8; x++){
-        for(y=2; y<6; y++){
-            board[x][y]=0;
-        }
-    }
-}
-
-
 function CheckBloque(x,y){
 
     valor = document.getElementById("b"+x+y).innerText;
-    valorant = valor;
     Turno(x,y,"none");
 
     if(sepuedeN){
@@ -66,7 +38,9 @@ function CheckBloque(x,y){
             deselect(x,y);
         }
             CheckPeonBlanco(x,y);
-            CheckTowerWhite(x,y);       
+            CheckWhitesTowers(x,y);
+            CheckWhiteHorse(x,y);
+            CheckWhiteAlfil(x,y);       
     }
 
     if(negras){
@@ -75,6 +49,10 @@ function CheckBloque(x,y){
             deselect(x,y);
         }
             CheckPeonNegro(x,y);
+            CheckBlacksTowers(x,y);
+            CheckBlackHorse(x,y);
+            CheckBlackAlfil(x,y);
+
     }
 }
 
