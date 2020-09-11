@@ -23,7 +23,6 @@ function CheckBloque(x,y){
 
     valor = document.getElementById("b"+x+y).innerText;
     Turno(x,y,"none");
-
     if(sepuedeN){
         CheckPeonNegro(x,y);
     }
@@ -38,9 +37,11 @@ function CheckBloque(x,y){
             deselect(x,y);
         }
             CheckPeonBlanco(x,y);
-            CheckWhitesTowers(x,y);
+            CheckWhiteTow(x,y);
             CheckWhiteHorse(x,y);
-            CheckWhiteAlfil(x,y);       
+            CheckWhiteAlfil(x,y);
+            CheckWhiteQueen(x,y);
+            CheckWhiteKing(x,y);       
     }
 
     if(negras){
@@ -49,10 +50,11 @@ function CheckBloque(x,y){
             deselect(x,y);
         }
             CheckPeonNegro(x,y);
-            CheckBlacksTowers(x,y);
+            CheckBlackTow(x,y);
             CheckBlackHorse(x,y);
             CheckBlackAlfil(x,y);
-
+            CheckBlackQueen(x,y);
+            CheckBlackKing(x,y);
     }
 }
 

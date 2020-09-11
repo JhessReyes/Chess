@@ -70,7 +70,7 @@ function CheckBlacksTowers(x,y){
                     blancas=true;
                     negras=false;
                     deselect(x,y);
-                    alert("Turno del jugador 2 (NEGRAS)");
+                    alert("Turno del jugador 1 (BLANCAS)");
                 }
             }
         }
