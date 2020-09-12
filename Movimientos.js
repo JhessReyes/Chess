@@ -20,7 +20,6 @@ function play(){
     Start();
 }
 function CheckBloque(x,y){
-
     valor = document.getElementById("b"+x+y).innerText;
     Turno(x,y,"none");
     if(sepuedeN){
@@ -56,7 +55,7 @@ function CheckBloque(x,y){
             CheckBlackQueen(x,y);
             CheckBlackKing(x,y);
     }
-}
+} /*FUNCION PRICIPAL PARA CHECKEAR UNA POSICION EN LA MATRIZ */
 
 
 /*FUNCIONES PARA VALIDAR DATOS DE LOS PEONES */
@@ -139,14 +138,16 @@ checktrue= false;
         }
 }
 
-function deselect(x,y){
+function deselect(x,y){ 
     mano=false;
     for(x=0; x<8; x++){
         for(y=0; y<8; y++){
             PintarBloque(x,y,"transparent");
         }
     }
-}
+}/*Funcion para deseleccionar el borde*/
+
+
 function comerBlancas(x,y){
     a =(x-1); b=(y-1);
     c =(x+1);
@@ -166,8 +167,10 @@ function comerBlancas(x,y){
             PintarBloque(x, y-1,"yellow");
         }            
     }    
-}
-function comerNegras(x,y){ /* VERIFICA SI A SUS ALREDEDORES HAY ENEMIGOS*/ 
+}/* VERIFICA SI A SUS ALREDEDORES HAY ENEMIGOS*/
+
+
+function comerNegras(x,y){  
     a =(x-1); b=(y+1); c =(x+1);
     if(!negras){
         if(c!=8)
@@ -185,9 +188,10 @@ function comerNegras(x,y){ /* VERIFICA SI A SUS ALREDEDORES HAY ENEMIGOS*/
             PintarBloque(x, b,"yellow");
         }            
     }  
-}
+}/* VERIFICA SI A SUS ALREDEDORES HAY ENEMIGOS*/
 
-function Cneg(x,y){ /* FUNCION QUE ELIMINA LAS PIEZAS NEGRAS POR TURNO */
+
+function Cneg(x,y){ 
     checktrue = false;
     dif_x = x - bloqueselec_x;
     dif_y = y - bloqueselec_y;
@@ -204,8 +208,10 @@ function Cneg(x,y){ /* FUNCION QUE ELIMINA LAS PIEZAS NEGRAS POR TURNO */
         board[bloqueselec_x][bloqueselec_y]=0;
         deselect(x,y);
     }
-}
-function Cbla(x,y){ /* FUNCION QUE ELIMINA LA PIEZA BLANCA POR TURNO*/
+}/* FUNCION QUE ELIMINA LAS PIEZAS NEGRAS POR TURNO */
+
+
+function Cbla(x,y){ 
     checktrue = false;
     dif_x = x - bloqueselec_x;
     dif_y = y - bloqueselec_y;
@@ -222,28 +228,30 @@ function Cbla(x,y){ /* FUNCION QUE ELIMINA LA PIEZA BLANCA POR TURNO*/
         board[bloqueselec_x][bloqueselec_y]=0;
         deselect(x,y);
     }
-}
+}/* FUNCION QUE ELIMINA LA PIEZA BLANCA POR TURNO*/
 
 
-
-function eliminarpieza(bloqueselec_x,bloqueselec_y){
-    valor = document.getElementById("b"+bloqueselec_x+bloqueselec_y);
+function eliminarpieza(bloqueselec_x,bloqueselec_y){ 
+        valor = document.getElementById("b"+bloqueselec_x+bloqueselec_y);
         valor.innerHTML="<span></span>";
-}
+ }/*FUNCION QUE TOMA DE ENTRADA EL BLOQUE ANTERIOR Y ELIMINA SU CONTENIDO */
 
-function PintarBloque(x,y,borderColor){
+
+function PintarBloque(x,y,borderColor){ 
     Bloque = document.getElementById("b"+x+y);
     Bloque.style.borderColor = borderColor;
-}
+}/* CUANDO SE LLAMA ESTA FUNCION PINTA LOS BLOQUES DESEADOS */
 
-function PintarPeonNegro(x,y){
+function PintarPeonNegro(x,y){ 
     Bloque = document.getElementById("b"+x+y);
     Bloque.innerHTML = "<span>&#x265F;</span>";
-}
+}/* PINTA EN LA PANTALLA SEGUN SU POSICION EL PEON NEGRO*/
+
 function PintarPeonBlanco(x,y){
     Bloque = document.getElementById("b"+x+y);
     Bloque.innerHTML = "<span>&#x2659;</span>";
-}   
+} /*PINTA EN LA PANTALLA SEGUN SU POSICION EL PEON BLANCO*/   
+
 function Turno(x,y,color){
     for(i=0; i<8; i++){
         for(j=0; j<8; j++){
@@ -266,6 +274,6 @@ function Turno(x,y,color){
             }
         }
     }
-}
+}/*CUANDO CAMBIA DE TURNO EL TABLERO CAMBIA DE COLOR */
 
 play();

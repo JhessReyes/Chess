@@ -21,7 +21,7 @@ body{
     justify-content: center;
     align-items: center;
     width: 0 auto;
-    height: 95vh;
+    height: 0 auto;
     background-color: wheat;
     border-radius: 25px;
 }
@@ -86,10 +86,12 @@ body{
 
 .Oscuro:hover{
     border-color: aquamarine;
+    background-color: aquamarine;
     border-style: outset;
 }
 
 .Claro:hover{
+    background-color: aquamarine;
     border-color: aquamarine;
     border-style: outset;
 }
